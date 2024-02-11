@@ -1,0 +1,209 @@
+body,  html{
+    height: 100%;
+}
+body, h1, h2,h3,h4, h5, h6, nav
+{
+    /* font-family: "Alumni Sans" sans-serif; */
+    font-family: 'Capriola', sans-serif;
+
+}
+/* .navv {
+    font-size: 2rem;
+} */
+ 
+/* Custom Styles for Navbar */
+/* .opacity-hover-off { 
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.opacity-hover-off:hover{
+    background-color: rgba(0, 0, 0, 1);
+}
+*/
+ .navbar-nav .nav-link{
+    color: white;
+    font-size: 1.2rem;
+} 
+/*
+.navbar-nav .nav-link:hover{
+    color: black;
+    background-color: white;
+} */
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #FEA116;
+}
+
+
+/* Custom Styles for Header */
+.bg-img {
+    /* background-image: url('assets/aplace.jpg');
+
+/* Custom Styles for image */
+    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url('assets/jollof3.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+}
+
+.btn{
+    min-width: 250px;
+}
+
+.btn.hover-btn:hover {
+    background-color: lightgrey;
+    color: black;
+    text-decoration: underline;
+}
+
+.display-1{  
+    /* font-family: 'Pacifico', cursive; */
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 40px;
+    padding: 30px;
+}
+.btn-primary {
+    /* background-color: #FEA116; */
+    border: none;
+    color: #fff;
+}
+
+.yellow {
+background-color: #FEA116;
+border: none;
+border-radius: 5px;
+} 
+
+#yellow{
+    background-color: #FEA116;
+}
+
+
+/* Custom styles for menu box*/
+.bg-black {
+    background-color: black;
+}
+
+.hover-red:hover{
+    background-color: #FEA116;
+    color: white;
+}
+
+.active-tab {
+    background-color: #FEA116;
+    color: white;
+}
+
+.border-dark {
+    border-color: dark-grey;
+}
+
+.badge {
+    padding: .6em .8em;
+}
+
+.small-tag {
+    padding: .3em .3em;
+}
+
+.bg-red {
+    background-color: red;
+    color: white;
+}
+
+.bg-grey {
+    background-color: grey;
+}
+
+.menu h1 {
+    color: black;
+}
+
+/* greyscale */
+.img-greyscale {
+    filter:grayscale(60%);
+}
+
+/* XL form boxes */
+.extra-large {
+    height: 60px;
+    font-size: 1.8rem;
+}
+
+
+ /* Style the form container */
+ .form-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #49aa8b; 
+    color: #fff;
+  }
+  
+  /* Style form elements */
+  .form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container input[type="password"],
+  .form-container select,
+  .form-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-container input[type="submit"],
+  .form-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #45a049;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .form-container input[type="submit"]:hover,
+  .form-container button:hover {
+    background-color: #ccc;
+  }
+  
+  #radioLabel{
+    display: inline;
+  }
+
+/* Hide on small screens */
+@media (max-width: 992px) {
+    #myNavbar {
+        display: none;
+}
+
+.tablink{
+    font-size: 1rem;
+}
+#menu {
+    box-sizing: border-box};
+}
+

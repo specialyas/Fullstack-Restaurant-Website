@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css"> 
     <!-- google fonts -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@500&display=swap" rel="stylesheet">
@@ -191,7 +191,7 @@
                 </p>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-12 text-end">
-                <img src="assets/chef.jpg" alt="chef" style="width: 200px;" class="rounded-circle">
+                <img src="/assets/chef.jpg" alt="chef" style="width: 200px;" class="rounded-circle">
             </div>
         </div>
         <p class="fs-2">We are proud of our staff</p>
@@ -218,6 +218,9 @@
              
                 <div class="mb-3">
                     <input type="datetime-local" class="form-control extra-large" placeholder="Date and Time" required name="date" value="date.now()">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control extra-large" placeholder="Message \ Special requirements" required name="Message">
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-light btn-lg btn-block fs-4">Send Message</button>

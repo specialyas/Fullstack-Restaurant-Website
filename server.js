@@ -1,10 +1,10 @@
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const AnimeWord = require('./models/words.js');
+// const AnimeWord = require('./models/words.js');
 const mongoose = require("mongoose");
 require('dotenv').config()
-
+ 
 
 // middleware
 app.set('view engine', 'ejs');
@@ -19,38 +19,31 @@ const db = mongoose.connection
 db.on('error', console.error.bind(console, 'connection error'))
 db.once('open', () => {
   console.log("Connected to MongoDB");
-}) 
+});
 
 
 // homepage
 app.get('/', (req, res) => {
-    res.render('home')
+    res.render('index.html')
 })
 
-// show all words
-app.get('/words', (req, res) => {
-
-// AnimeWord
-//   .find() 
-//   .then(results => { 
-//     // console.log(results)
-//      res.render('words',  {words:results})
-//     }).catch(error => {
-//       res.send(error)
-//       console.error(error)})   
-})
 
 // add words 
 app.get('/add', (req, res) => {
     res.render('add')
 })
+const contatSchema = new mongoose.Schema({
+    name: String,
+    people: Number,
+    date: Date,
+    message: String
+})
 
-
-// HAndle form submission request
+// Handle form submission request
 app.post('/submit', async (req, res) => {
     const formData = {
         name: req.body.name, 
-        meaning: req.body.People,
+        people: req.body.People,
         date: new Date(req.body.date),
         message: req.body.Message
         } 

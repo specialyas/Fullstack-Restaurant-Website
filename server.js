@@ -82,15 +82,7 @@ app.post('/submit', async (req, res) => {
 
 
 
-// app.delete((req, res) => { 
-//   Article.deleteOne(
-//     {title: req.params.articleName},
-//   ) .then(() => {
-//      res.send("Successfully deleted article")
-//    }).catch(error => {
-//      res.send(error)
-//      console.error(error)}) 
-// })
+
 
 app.listen(4000, () => {
     console.log('Connected to port 4000');

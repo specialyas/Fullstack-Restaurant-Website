@@ -46,44 +46,45 @@ app.get('/add', (req, res) => {
 })
 
 
-// add a word
-app.post('/word', (req, res) => {
-    const word = new AnimeWord ({
-        animeWord: req.body.animeWord, 
-        meaning: req.body.meaning
-        });
-        word.save()
-        .then(() => {
-            console.log('Item succedfully added to the database');
-            res.redirect('/words')
-            })
-        .catch((err) => {
-            console.log(err);
-        });  
-    })
+// HAndle form submission request
+app.post('/submit', async (req, res) => {
+    const formData = {
+        name: req.body.name, 
+        meaning: req.body.People,
+        date: new Date(req.body.date),
+        message: req.body.Message
+        } 
+        try {
+            const newContact = new Contact(formData)
+            await newContact.save()
+            res.redirect('/?success')
+        } catch  (error) {
+            res.redirect('/?error')
+        }
+    }) 
 
-
+ 
     // show the dashboard
 // app.get('/dashboard', (req, res) => {
 // res.render('dashboard')
 // })
 
 // delete a wpord
-app.get('/delete', (req, res) => { 
-    res.render('delete')
-})
-app.post('/delete', (req, res) => { 
-  console.log(req.body)
-  let word = req.body.animeWord
-  AnimeWord.deleteOne(
-        {animeWord: word}, 
-      ) .then(() => {
-        console.log("Successfully deleted word")
-         res.redirect("/words")
-       }).catch(error => {
-         res.send(error)
-         console.error(error)}) 
-    })
+// app.get('/delete', (req, res) => { 
+//     res.render('delete')
+// })
+// app.post('/delete', (req, res) => { 
+//   console.log(req.body)
+//   let word = req.body.animeWord
+//   AnimeWord.deleteOne(
+//         {animeWord: word}, 
+//       ) .then(() => {
+//         console.log("Successfully deleted word")
+//          res.redirect("/words")
+//        }).catch(error => {
+//          res.send(error)
+//          console.error(error)}) 
+//     }) 
     
 
 

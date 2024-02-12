@@ -32,12 +32,14 @@ app.get('/', (req, res) => {
 app.get('/add', (req, res) => {
     res.render('add')
 })
-const contatSchema = new mongoose.Schema({
+const contactSchema = new mongoose.Schema({
     name: String,
     people: Number,
     date: Date,
     message: String
 })
+
+const Contact  = mongoose.model("COntact", contactSchema)
 
 // Handle form submission request
 app.post('/submit', async (req, res) => {

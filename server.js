@@ -53,28 +53,6 @@ app.post('/submit', async (req, res) => {
         }
     }) 
 
- 
-// delete a wpord
-// app.get('/delete', (req, res) => { 
-//     res.render('delete')
-// })
-// app.post('/delete', (req, res) => { 
-//   console.log(req.body)
-//   let word = req.body.animeWord
-//   AnimeWord.deleteOne(
-//         {animeWord: word}, 
-//       ) .then(() => {
-//         console.log("Successfully deleted word")
-//          res.redirect("/words")
-//        }).catch(error => {
-//          res.send(error)
-//          console.error(error)}) 
-//     }) 
-    
-
-
-
-
 
 app.listen(4000, () => {
     console.log('Connected to port 4000');

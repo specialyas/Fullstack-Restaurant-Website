@@ -28,10 +28,6 @@ app.get('/', (req, res) => {
 })
 
 
-// add words 
-app.get('/add', (req, res) => {
-    res.render('add')
-})
 const contactSchema = new mongoose.Schema({
     name: String,
     people: Number,

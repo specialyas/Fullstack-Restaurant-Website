@@ -1,4 +1,4 @@
-// Tabbed Menu
+// Alert Box display Success or failure using the url parameters
 window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search)
 

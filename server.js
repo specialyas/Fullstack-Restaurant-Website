@@ -22,12 +22,6 @@ db.once('open', () => {
 });
 
 
-// homepage
-app.get('/', (req, res) => {
-    res.render('index.html')
-})
-
-
 const contactSchema = new mongoose.Schema({
     name: String,
     people: Number,
@@ -36,6 +30,11 @@ const contactSchema = new mongoose.Schema({
 })
 
 const Contact  = mongoose.model("COntact", contactSchema)
+
+// homepage
+app.get('/', (req, res) => {
+    res.render('index.html')
+})
 
 // Handle form submission request
 app.post('/submit', async (req, res) => {
@@ -55,11 +54,6 @@ app.post('/submit', async (req, res) => {
     }) 
 
  
-    // show the dashboard
-// app.get('/dashboard', (req, res) => {
-// res.render('dashboard')
-// })
-
 // delete a wpord
 // app.get('/delete', (req, res) => { 
 //     res.render('delete')

@@ -1,4 +1,22 @@
 // Tabbed Menu
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search)
+
+
+    if(urlParams.has('success')) {
+        alert('Reservation successful')
+    } else if (urlParams.has('error')) {
+        alert('There was an error in making the reservation')
+    }
+}
+
+
+
+
+
+
+
+// Tabbed Menu
 
 function openMenu(event, menuName) {
     let menuArray = document.getElementsByClassName("menu");
